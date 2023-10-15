@@ -1,112 +1,135 @@
-@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500&display=swap'); 
-.banner{
-  margin: 0;
-  padding: 0;
-  font-family: "Pixelify", sans-serif;
-}  
-.navbar{
-  color: aqua;
-  width: 85%;
-  margin: auto;
-  padding: -5;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: aqua;
 }
-.logo{
-  width: 120px;
-  cursor: pointer;
-}
-.navbar ul li {
-  list-style: none;
-  display: inline-block;
-  margin: 0 20px;
-  position: relative;
-
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: black;
 
 }
-.navbar ul li a{
-  text-decoration: none;
-  color: aqua;
-  text-transform:uppercase;
-}
-.navbar ul li::after{
-  content: '';
-  height: 3px;
-  width: 0;
-  background: aquamarine;
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  transition:0.3s;
+.wrapper{
+    width: 420px;
+    background:transparent;
+    color: aqua;
+    border: 2px solid;
+    border-radius: 2px aqua;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow:0 0 50px aqua ;
+    height: 50%;
+    min-height: 50vh;
+    max-height: 100vh;
+    
 
 }
-.navbar ul li:hover:after{
-  width: 100%;
+.wrapper h1{
+ font-size: 36px; 
+ font-weight: bold;
+ margin: 20px;
+   
 }
-.content{
-  width: 100%;
-  color: aqua;
-  position:absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  text-align: center;
+.remember-forgot h2{
+    font-weight: lighter;
+    font-size: small;
+    font-size: 15px;
+    position: relative;
+    right: 26px;
+
+
+    
+
 }
-.content h1{
-  font-size: 60px;
-  margin-top: 80px;
+
+.remember-forgot a{
+    color: aquamarine;
+    text-decoration: none;
+    
+
 }
-.content p{
-  margin: 20px auto;
-  font-weight: 100;
-  line-height: 20px;
+.remember-forgot a:hover{
+    text-decoration: underline solid aqua;
+}
+.input input{
+    background-color:transparent;
+    width:80%;
+    height:40px;
+    outline: none;
+    border: none;
+    font-size: medium;
+    padding: 2px 1px 1 2px;
+    border-bottom: 2px solid aqua;
+    position: relative;
+
+}
+
+.input input::placeholder{
+    color: rgb(0, 255, 255);
+}
+.wrapper .remember-forgot label input{
+    accent-color: aqua;
+    position: relative;
+    left: 40px;
+    height: 15px;
+}
+
+.wrapper .remember-forgot {
+    display:flex;
+    justify-content:space-between;
+    font-size:15px;
+    margin:10px 0 9px;
+    width: 90%;
+
 }
 button{
-  width: 200px;
-  padding: 15px 0;
-  text-align: center;
-  margin: 20px 10px;
-  border-radius: 25px;
-  font-weight: bold;
-  border: 2px solid aqua;
-  background:transparent;
-  color: rgb(0, 255, 221);
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  transition: 0.5s  ;
-}
-span{
-  background: rgb(0, 255, 204);
-  height: 100%;
-  width: 0;
-  border-radius: 25px;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  z-index: -1;
-  transition: 0.5s;
-
-}
-button:hover span{
-  width: 100%;
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid aqua;
+    background:transparent;
+    color: rgb(0, 255, 221);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s;
+    justify-content: center;
 }
 button:hover{
-  border: rgb(0, 214, 221);
-  background-color: aqua;
-  color: black;
+    border: rgb(0, 214, 221);
+    background-color: aqua;
+    box-shadow:0 0 50px aqua;
+    color:rgb(0, 0, 0);
 }
-.navbar:hover{
-  animation: animate 0.5s linear infinite;
+.register-link a{
+    color: aquamarine;
+    text-decoration: none;
 }
-.content:hover{
-  animation: animate 0.5s linear infinite;
+.register-link a:hover{
+    text-decoration: underline solid aqua;
 }
-.logo:hover{
-  animation: animate 1s linear infinite;
+.register-link a2{
+    font-weight: lighter;
+    font-size: small;
+    font-size: 13px;
+    color: aquamarine;
+}
+.register-link a2:hover{
+    text-decoration: underline solid aqua;
+
+}
+.wrapper:hover{
+    animation: animate 1s linear infinite;
 }
 @keyframes animate {
-  100% {
-      filter: hue-rotate(360deg);
-  }
+    100% {
+        filter: hue-rotate(360deg);
+    }
 }
